@@ -13,16 +13,22 @@
 // console.log(sq4);
 
 
-// let x=6;
-// function fn(){
-//     console.log("hellloo");
-// }
+// Hoisting
+
 
 // fn();
 // console.log(x);
 
-//Hoisting
+var x=6;
+function fn(){
+    console.log("hellloo");
+}
 
-let x;
-console.log(x);
-x=7;
+console.log(fn);
+
+
+
+
+
+
+
