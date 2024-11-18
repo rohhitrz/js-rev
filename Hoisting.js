@@ -1,6 +1,6 @@
 
 fn();
-console.log(x)
+console.log(x);
 
 function fn(){
     console.log("Namaste");
