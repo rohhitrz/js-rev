@@ -39,7 +39,7 @@ document.querySelector('#start').addEventListener('click',function(){
 
 document.querySelector('#stop').addEventListener('click',function(){
     
-    clearTimeout(keep);
+    clearInterval(keep);
     console.log("Interval Stopped");
 })
 
