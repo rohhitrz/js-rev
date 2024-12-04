@@ -1,3 +1,4 @@
+
 function setUsername(username){
     this.username=username;
 
@@ -14,3 +15,6 @@ function createUser(username,email,password){
 
 const user=new createUser("chai", "xyz@emaple.com", "123456789");
 console.log((user));
+
+
+console.log("just doing random logs to debug "+user.username);
