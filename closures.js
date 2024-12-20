@@ -17,7 +17,7 @@ function something(){
     return otherThing;
 }
 let alpha =something();
-console.log(alpha);
+console.log(alpha); // the output will be  a function and the value  of v will be 7
 
 alpha();
 

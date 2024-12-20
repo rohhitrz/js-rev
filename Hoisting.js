@@ -7,3 +7,5 @@ function fn(){
 }
 
 var x=6;
+
+;
