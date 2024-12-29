@@ -32,7 +32,7 @@ html,body{
 
 } */
 
-#car1{
+/* #car1{
     width: 100px;
     height: 120px;
     background-color: red;
@@ -54,9 +54,9 @@ html,body{
     height: 110px;
     background-color: green;
 
-}
+} */
 
-#box{
+/* #box{
     position: relative;
     width: 300px;
     height: 300px;
@@ -70,4 +70,33 @@ html,body{
     height: 100px;
     background-color: rgb(87, 163, 163);
 
+} */
+
+#box{
+    display: flex;
+    justify-content: space-between ;
+     align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: grey;
 }
+
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: #77d743;
+
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(11, 11, 168);
+
+}
+#box3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(243, 24, 24);
+
+} 
+
