@@ -3,6 +3,7 @@ import Debouncing from './components/Debouncing'
 import SearchComponent from './LifeCycleMethods/SearchComponent'
 import {UseRefHook} from './Hooks/UseRef/UseRefHook'
 import UseRefPreviousState from './Hooks/UseRef/UseRefPreviousState'
+import './App.css'
 
 
 function App() {
