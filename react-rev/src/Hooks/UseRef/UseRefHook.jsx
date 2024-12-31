@@ -1,7 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 export const UseRefHook = () => {
   const initialRef = useRef(null);
+
+  useEffect(()=>{
+  if(initialRef.current){
+    initialRef.current.focus()
+  }
+})
+
 
   const handleFocus = () => {
     initialRef.current.focus();
@@ -9,7 +16,7 @@ export const UseRefHook = () => {
 
   return (
     <div>
-      <input type="text" ref={initialRef} />
+      <input type="text" ref={initialRef}  />
       <button onClick={handleFocus}>click</button>
     </div>
   );

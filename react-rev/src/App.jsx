@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import Debouncing from './components/Debouncing'
 import SearchComponent from './LifeCycleMethods/SearchComponent'
-import {UseRefHook} from '../src/components/UseRefHook'
+import {UseRefHook} from './Hooks/UseRef/UseRefHook'
+import UseRefPreviousState from './Hooks/UseRef/UseRefPreviousState'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <> 
     {/* <Debouncing/> */}
     {/* <SearchComponent/> */}
-    <UseRefHook/>
+    {/* <UseRefHook/> */}
+    <UseRefPreviousState/>
     
     
 
