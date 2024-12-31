@@ -82,3 +82,72 @@ fetchUserData((user) => {
     });
 });
 
+
+//refactoring callback hell with promises
+
+function fetchUserData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Fetched user data");
+            resolve({ userId: 1, username: "JohnDoe" });
+        }, 1000);
+    });
+}
+
+function processUserData(user) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Processing data for user: ${user.username}`);
+            resolve({ userId: user.userId, processedData: "Processed Data for JohnDoe" });
+        }, 1000);
+    });
+}
+
+function saveProcessedData(processedData) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Saving data: ${processedData.processedData}`);
+            resolve(true);
+        }, 1000);
+    });
+}
+
+function sendConfirmationEmail(saved) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (saved) {
+                console.log("Confirmation email sent to user.");
+                resolve(true);
+            } else {
+                reject("Failed to send confirmation email.");
+            }
+        }, 1000);
+    });
+}
+
+// Chaining Promises
+fetchUserData()
+    .then(user => processUserData(user))
+    .then(processedData => saveProcessedData(processedData))
+    .then(saved => sendConfirmationEmail(saved))
+    .then(() => console.log("All tasks completed successfully!"))
+    .catch(error => console.error("Error:", error));
+
+
+
+    //further simplification with Async/Await
+
+    async function handleUserFlow() {
+        try {
+            const user = await fetchUserData();
+            const processedData = await processUserData(user);
+            const saved = await saveProcessedData(processedData);
+            await sendConfirmationEmail(saved);
+            console.log("All tasks completed successfully!");
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+    
+    handleUserFlow();
+    
