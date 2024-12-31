@@ -23,7 +23,7 @@ export default function Debouncing() {
       />
 
       <div>
-        <strong>Input Value:</strong> {userInput};
+        <strong>Input Value:</strong> {userInput}
       </div>
       <div>
         <strong>Debounced Value:</strong> {debouncedValue}
