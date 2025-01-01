@@ -13,6 +13,8 @@ function Contact() {
 }
 
 function AppRouter(){
+    console.log("bk;");
+    
     
     return(
     <Router>
