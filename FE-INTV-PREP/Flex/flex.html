@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox demo</title>
+
+    <style>
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        align-items: flex-start;
+        align-content: space-around;
+        justify-content: center;
+        height: 300px; /* Height of the container */
+        background-color: #f9f9f9;
+        border: 2px dashed #ccc;
+        padding: 10px;
+      }
+
+      .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 1rem;
+            text-align: center;
+            flex-basis: 150px; /* Initial size of each item */
+            flex-grow: 1; 
+            flex-shrink: 1; /* Each item shrinks equally by default */
+        } 
+        
+        .item-2 {
+            flex-grow: 2; /* This item grows twice as much as others */
+        }
+
+        .item-4 {
+            flex-shrink: 0; /* Prevent this item from shrinking */
+        }
+
+        .item-5 {
+            align-self: center; /* Override container alignment, center this item vertically */
+            background-color: #FF5722;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item-2">item-1</div>
+      <div class="flex-item item-2">item-2</div>
+      <div class="flex-item item-3">item-3</div>
+      <div class="flex-item item-4">item-4</div>
+      <div class="flex-item item-5">item-5</div>
+      <div class="flex-item item-6">item-6</div>
+    </div>
+  </body>
+</html>
