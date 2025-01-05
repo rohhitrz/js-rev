@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Effects } from './components/Effects'
 import UseCounter from '../customHooks/UseCounter'
+import PrevCount from './UseRef/PrevCount';
 function App() {
 const {increment,decrement,reset,count}= UseCounter();
  
@@ -16,6 +17,9 @@ const {increment,decrement,reset,count}= UseCounter();
     <button onClick={decrement}>-</button>
     {}
     <button onClick={reset}>reset</button>
+
+
+    <PrevCount/>
     </>
   )
 }
