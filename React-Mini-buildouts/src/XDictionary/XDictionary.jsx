@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-useState;
 
-const XDictinonary = () => {
+
+const XDictionary = () => {
   const [dictionary] = useState([
     {
       word: "React",
@@ -18,7 +18,7 @@ const XDictinonary = () => {
     if (foundword) {
       setResult(foundword.meaning);
     } else {
-      return "not found";
+       setResult("not Found");
     }
   }
 
@@ -41,4 +41,4 @@ const XDictinonary = () => {
   );
 };
 
-export default XDictinonary;
+export default XDictionary;

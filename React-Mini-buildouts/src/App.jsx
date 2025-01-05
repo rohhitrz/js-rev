@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import  XDictinonary  from './XDictionary/XDictinonary'
+import  XDictionary  from './XDictionary/XDictionary'
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-  <XDictinonary/>
+  <XDictionary/>
     </>
   )
 }
